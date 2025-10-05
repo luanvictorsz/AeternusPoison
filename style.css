@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     min-height: 100vh;
+     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+     font-family: 'Cormorant Garamond', serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     position: relative;
+     overflow-x: hidden;
+ }
+
+ body::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-image:
+         radial-gradient(circle at 20% 50%, rgba(120, 0, 120, 0.1) 0%, transparent 50%),
+         radial-gradient(circle at 80% 80%, rgba(75, 0, 130, 0.1) 0%, transparent 50%);
+     animation: pulse 8s ease-in-out infinite;
+ }
+
+ @keyframes pulse {
+
+     0%,
+     100% {
+         opacity: 0.5;
+     }
+
+     50% {
+         opacity: 1;
+     }
+ }
+
+ .container {
+     max-width: 500px;
+     width: 100%;
+     position: relative;
+     z-index: 1;
+ }
+
+ .profile {
+     text-align: center;
+     margin-bottom: 40px;
+     animation: fadeInDown 1s ease-out;
+ }
+
+
+ @keyframes fadeInDown {
+     from {
+         opacity: 0;
+         transform: translateY(-30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .profile-image {
+     width: 130px;
+     height: 130px;
+     border-radius: 50%;
+     border: 3px solid #8b5cf6;
+     box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.3);
+     margin-bottom: 20px;
+     object-fit: cover;
+     animation: glow 3s ease-in-out infinite;
+ }
+
+ @keyframes glow {
+
+     0%,
+     100% {
+         box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.3);
+     }
+
+     50% {
+         box-shadow: 0 0 40px rgba(139, 92, 246, 0.7), 0 0 80px rgba(139, 92, 246, 0.5);
+     }
+ }
+
+ .profile h1 {
+     font-family: 'Creepster', cursive;
+     font-size: 2.5rem;
+     color: #e0e0e0;
+     margin-bottom: 10px;
+     text-shadow: 0 0 20px rgba(139, 92, 246, 0.7);
+     letter-spacing: 2px;
+ }
+
+ .profile p {
+     color: #b0b0b0;
+     font-size: 1.1rem;
+     font-style: italic;
+ }
+
+ .links {
+     display: flex;
+     flex-direction: column;
+     gap: 18px;
+ }
+
+ .link-item {
+     position: relative;
+     animation: fadeInUp 0.8s ease-out backwards;
+ }
+
+ .link-item:nth-child(1) {
+     animation-delay: 0.1s;
+ }
+
+ .link-item:nth-child(2) {
+     animation-delay: 0.2s;
+ }
+
+ .link-item:nth-child(3) {
+     animation-delay: 0.3s;
+ }
+
+ .link-item:nth-child(4) {
+     animation-delay: 0.4s;
+ }
+
+ .link-item:nth-child(5) {
+     animation-delay: 0.5s;
+ }
+
+ .link-item:nth-child(6) {
+     animation-delay: 0.6s;
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .link-item a {
+     display: block;
+     padding: 18px 30px;
+     background: rgba(20, 20, 40, 0.6);
+     border: 2px solid rgba(139, 92, 246, 0.3);
+     border-radius: 15px;
+     color: #e0e0e0;
+     text-decoration: none;
+     font-size: 1.1rem;
+     font-weight: 600;
+     text-align: center;
+     transition: all 0.3s ease;
+     backdrop-filter: blur(10px);
+     position: relative;
+     overflow: hidden;
+ }
+
+ .link-item a::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+     transition: left 0.5s ease;
+ }
+
+ .link-item a:hover::before {
+     left: 100%;
+ }
+
+ .link-item a:hover {
+     transform: translateY(-5px);
+     border-color: #8b5cf6;
+     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+     background: rgba(139, 92, 246, 0.1);
+ }
+
+ .link-item a span {
+     position: relative;
+     z-index: 1;
+ }
+
+ .footer {
+     text-align: center;
+     margin-top: 40px;
+     color: #6b6b6b;
+     font-size: 0.9rem;
+     animation: fadeIn 2s ease-out;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ .skull {
+     font-size: 1.5rem;
+     display: inline-block;
+     animation: float 3s ease-in-out infinite;
+ }
+
+ @keyframes float {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+ }
